@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     @State private var selection = 0
@@ -16,43 +17,40 @@ struct ContentView: View {
     }
  
     var body: some View {
-        TabView(selection: $selection){
-            Text("GDM")
-                .font(.title)
-                .tabItem {
+        TabView(selection: $selection) {
+            Master().tabItem({
                     VStack {
-                        Image("first")
+                        Image("home")
                         Text("GDM")
                     }
-                }
+                })
                 .tag(0)
-            Text("Disclaimer")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("Disclaimer")
-                    }
+            
+            DisclaimerView().tabItem({
+                VStack {
+                    Image("disclaimer")
+                    Text("Disclaimer")
                 }
-                .tag(1)
-            Text("About")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("About")
-                    }
+            })
+            .tag(1)
+            
+            AboutView().tabItem({
+                VStack {
+                    Image("about")
+                    Text("About")
                 }
-                .tag(2)
-            Text("Resources")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("Resources")
-                    }
+            })
+            .tag(2)
+            
+            ResourcesView().tabItem({
+                VStack {
+                    Image("resources")
+                    Text("Resources")
                 }
-                .tag(3)
+            })
+            .tag(3)
+            
+
         }
     }
 }
