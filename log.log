@@ -1,0 +1,116 @@
+commit efdfce344981194775a5dee83ab9c2089f999f9e
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Wed Nov 13 09:57:01 2019 -0500
+
+    11/13/19 10:00am First submission
+
+ .../UserInterfaceState.xcuserstate                 | Bin 31228 -> 31282 bytes
+ GDM/GDM/EnterBGView.swift                          |  40 ++++++++++++++++-----
+ GDM/GDM/SceneDelegate.swift                        |   4 +--
+ 3 files changed, 32 insertions(+), 12 deletions(-)
+
+commit 824fde28e8ff51778c0c8c851db007614e621506
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Mon Nov 11 15:00:07 2019 -0500
+
+    11/11/2019 3:00pm Started implementing navigation
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ GDM/GDM.xcodeproj/project.pbxproj                  | 282 +++++++++++----------
+ .../xcshareddata/WorkspaceSettings.xcsettings      |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 22593 -> 31228 bytes
+ .../WorkspaceSettings.xcsettings                   |  18 ++
+ GDM/GDM/AboutView.swift                            |  21 ++
+ GDM/GDM/AppDelegate.swift                          |   2 +-
+ GDM/GDM/Assets.xcassets/.DS_Store                  | Bin 6148 -> 0 bytes
+ .../Assets.xcassets/about.imageset/Contents.json   |  23 ++
+ GDM/GDM/Assets.xcassets/about.imageset/about.png   | Bin 0 -> 2329 bytes
+ GDM/GDM/Assets.xcassets/about.imageset/about2.png  | Bin 0 -> 3207 bytes
+ GDM/GDM/Assets.xcassets/about.imageset/about3.png  | Bin 0 -> 4232 bytes
+ .../disclaimer.imageset/Contents.json              |  23 ++
+ .../disclaimer.imageset/disclaimer.png             | Bin 0 -> 2063 bytes
+ .../disclaimer.imageset/disclaimer2.png            | Bin 0 -> 2488 bytes
+ .../disclaimer.imageset/disclaimer3.png            | Bin 0 -> 2892 bytes
+ .../Assets.xcassets/first.imageset/Contents.json   |  12 -
+ GDM/GDM/Assets.xcassets/first.imageset/first.pdf   | Bin 2465 -> 0 bytes
+ .../Assets.xcassets/home.imageset/Contents.json    |  23 ++
+ GDM/GDM/Assets.xcassets/home.imageset/home.png     | Bin 0 -> 1931 bytes
+ GDM/GDM/Assets.xcassets/home.imageset/home2.png    | Bin 0 -> 2146 bytes
+ GDM/GDM/Assets.xcassets/home.imageset/home3.png    | Bin 0 -> 2302 bytes
+ .../resources.imageset/Contents.json               |  23 ++
+ .../resources.imageset/resources.png               | Bin 0 -> 1898 bytes
+ .../resources.imageset/resources2.png              | Bin 0 -> 2141 bytes
+ .../resources.imageset/resources3.png              | Bin 0 -> 2380 bytes
+ .../Assets.xcassets/second.imageset/Contents.json  |  12 -
+ GDM/GDM/Assets.xcassets/second.imageset/second.pdf | Bin 2423 -> 0 bytes
+ GDM/GDM/ContentView.swift                          |  58 ++---
+ GDM/GDM/DisclaimerView.swift                       |  21 ++
+ GDM/GDM/EnterBGView.swift                          |  26 ++
+ GDM/GDM/Master.swift                               |  63 +++++
+ GDM/GDM/ResourcesView.swift                        |  21 ++
+ GDM/GDM/SceneDelegate.swift                        |   6 +-
+ GDM/GDMTests/GDMTests.swift                        |   2 +-
+ GDM/GDMUITests/GDMUITests.swift                    |   2 +-
+ Image Templates/About.afdesign                     | Bin 403138 -> 405455 bytes
+ Image Templates/Disclaimer.afdesign                | Bin 397911 -> 398248 bytes
+ Image Templates/House.afdesign                     | Bin 395975 -> 396330 bytes
+ Image Templates/References.afdesign                | Bin 402249 -> 402294 bytes
+ 40 files changed, 456 insertions(+), 190 deletions(-)
+
+commit 2f56d01ce4f51550e038b8f7474c785e58c0e113
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Mon Nov 4 10:42:21 2019 -0500
+
+    11/4/2019 10:442am Created Tabbed App Project
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ GDM/GDM.xcodeproj/project.pbxproj                  | 599 +++++++++++++++++++++
+ .../project.xcworkspace/contents.xcworkspacedata   |   7 +
+ .../xcshareddata/IDEWorkspaceChecks.plist          |   8 +
+ .../UserInterfaceState.xcuserstate                 | Bin 0 -> 22593 bytes
+ .../xcschemes/xcschememanagement.plist             |  14 +
+ GDM/GDM/AppDelegate.swift                          |  37 ++
+ GDM/GDM/Assets.xcassets/.DS_Store                  | Bin 0 -> 6148 bytes
+ .../AppIcon.appiconset/Contents.json               |  98 ++++
+ GDM/GDM/Assets.xcassets/Contents.json              |   6 +
+ .../Assets.xcassets/first.imageset/Contents.json   |  12 +
+ GDM/GDM/Assets.xcassets/first.imageset/first.pdf   | Bin 0 -> 2465 bytes
+ .../Assets.xcassets/second.imageset/Contents.json  |  12 +
+ GDM/GDM/Assets.xcassets/second.imageset/second.pdf | Bin 0 -> 2423 bytes
+ GDM/GDM/Base.lproj/LaunchScreen.storyboard         |  25 +
+ GDM/GDM/ContentView.swift                          |  64 +++
+ GDM/GDM/Info.plist                                 |  70 +++
+ .../Preview Assets.xcassets/Contents.json          |   6 +
+ GDM/GDM/SceneDelegate.swift                        |  64 +++
+ GDM/GDMTests/GDMTests.swift                        |  34 ++
+ GDM/GDMTests/Info.plist                            |  22 +
+ GDM/GDMUITests/GDMUITests.swift                    |  43 ++
+ GDM/GDMUITests/Info.plist                          |  22 +
+ Image Templates/.DS_Store                          | Bin 6148 -> 6148 bytes
+ Image Templates/About.afdesign                     | Bin 0 -> 403138 bytes
+ Image Templates/Disclaimer.afdesign                | Bin 0 -> 397911 bytes
+ Image Templates/House.afdesign                     | Bin 0 -> 395975 bytes
+ Image Templates/References.afdesign                | Bin 0 -> 402249 bytes
+ Image Templates/app_icon.afdesign                  | Bin 629299 -> 545283 bytes
+ 29 files changed, 1143 insertions(+)
+
+commit 7ab80f9f1824ab025dd6ef895ce51c89a4954ba0
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Wed Oct 30 10:50:59 2019 -0400
+
+    Initial Commit
+
+ .DS_Store                         | Bin 0 -> 6148 bytes
+ Image Templates/.DS_Store         | Bin 0 -> 6148 bytes
+ Image Templates/Settings.afdesign | Bin 0 -> 422129 bytes
+ Image Templates/app_icon.afdesign | Bin 0 -> 629299 bytes
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+
+commit bf7b43276824e8b7a5f97442f16399e6ce710835
+Author: mlvangorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Wed Oct 30 09:50:56 2019 -0400
+
+    Initial commit
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
