@@ -20,7 +20,7 @@ struct ContentView: View {
         TabView(selection: $selection) {
             Master().tabItem({
                     VStack {
-                        Image("home")
+                        Image(home)
                         Text("GDM")
                     }
                 })
@@ -28,24 +28,24 @@ struct ContentView: View {
             
             DisclaimerView().tabItem({
                 VStack {
-                    Image("disclaimer")
-                    Text("Disclaimer")
+                    Image(disclaimer)
+                    Text(disclaimer)
                 }
             })
             .tag(1)
             
             AboutView().tabItem({
                 VStack {
-                    Image("about")
-                    Text("About")
+                    Image(about)
+                    Text(about)
                 }
             })
             .tag(2)
             
             ResourcesView().tabItem({
                 VStack {
-                    Image("resources")
-                    Text("Resources")
+                    Image(resources)
+                    Text(resources)
                 }
             })
             .tag(3)

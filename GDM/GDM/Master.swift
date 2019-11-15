@@ -13,14 +13,14 @@ struct Master: View {
         NavigationView {
             VStack(spacing: 75){
                 
-                NavigationLink(destination: EnterBGView(bgText: "", bgInt: -1)) {
-                    Text("Enter BG")
+                NavigationLink(destination: EnterBGView()) {
+                    Text(enterBG)
                     .font(.title)
                 }
                 .frame(minWidth: 0, maxWidth: .infinity)
                       .padding([.top, .bottom], 8)
                       .padding([.trailing, .leading], -20)
-                      .background(Color.pink)
+                      .background(Color.yellow)
                 
                 /*
                 Button(action: {
@@ -57,7 +57,7 @@ struct Master: View {
                 */
             }
 
-            .navigationBarTitle(Text("GDM"), displayMode: .inline)
+            .navigationBarTitle(Text(title), displayMode: .automatic)
         }
     }
 }

@@ -7,7 +7,9 @@
 //
 import SwiftUI
 
-struct EnterBGView: View {
+
+// this whole thing needs to be restructured, currently just a copy of EnterBGView
+struct SettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
@@ -19,7 +21,7 @@ struct EnterBGView: View {
     var body: some View {
         Form {
             HStack{
-                Text("Blood Glucose")
+                Text("Setting1")
                 TextField("mg/dL", text: $bgText)
                 .keyboardType(.numberPad)
                 .multilineTextAlignment(.trailing)
@@ -34,25 +36,12 @@ struct EnterBGView: View {
                 }
             }
             
-            DatePicker(
-                selection: $selectedDate,
-                displayedComponents: [.hourAndMinute, .date],
-                label: { Text("Date / Time") }
-            )
-
-            Picker(selection: $selectedType, label: Text("Type of Reading")) {
-                ForEach( 0 ..< Types.count) {
-                    Text(Types[$0])
-                }
-            }
-            .pickerStyle(WheelPickerStyle())
-            
             Button(action: {
                     self.confirmSubmission.toggle()
             }) {
                 Text("Submit")
             }
-            .disabled(self.bgText == "" || self.selectedType == -1)
+            .disabled(false)
         }
         .navigationBarTitle(Text(enterBG), displayMode: .automatic)
         .alert(isPresented: $confirmSubmission) {
@@ -63,7 +52,7 @@ struct EnterBGView: View {
             //loads UserDefaults of the user's BGReadings
             var readings = [BGReading]()
             let defaults = UserDefaults.standard
-            if let data = defaults.data(forKey: "BGReadings") {
+            if let data = defaults.data(forKey: "Settings") {
                 readings = try! PropertyListDecoder().decode([BGReading].self, from: data)
             }
             
@@ -75,7 +64,7 @@ struct EnterBGView: View {
                     return bg1.date_time > bg2.date_time
                 }
                 //stores the sorted array back into UserDefaults
-                UserDefaults.standard.set(try? PropertyListEncoder().encode(readings), forKey: "BGReadings")
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(readings), forKey: "Settings")
                 
                 self.presentationMode.wrappedValue.dismiss() //pops current view
                 }), secondaryButton: .cancel() )

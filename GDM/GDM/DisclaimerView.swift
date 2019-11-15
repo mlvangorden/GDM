@@ -12,10 +12,10 @@ struct DisclaimerView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 75){
-                Text("Disclaimer")
+                Text(disclaimer)
                 .font(.title)
             }
-            .navigationBarTitle(Text("Disclaimer"), displayMode: .inline)
+            .navigationBarTitle(Text(disclaimer), displayMode: .inline)
         }
     }
 }

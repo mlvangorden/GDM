@@ -12,10 +12,10 @@ struct ResourcesView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 75){
-                Text("Resources")
+                Text(resources)
                 .font(.title)
             }
-            .navigationBarTitle(Text("Resources"), displayMode: .inline)
+            .navigationBarTitle(Text(resources), displayMode: .inline)
         }
     }
 }
