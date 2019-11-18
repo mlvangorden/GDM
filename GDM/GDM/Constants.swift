@@ -21,7 +21,6 @@ let Types = [   "Fasting",
     "2 hours after Dinner",
     "Bedtime",
     "Overnight",
-    "Other"
 ]
 
 let title = "GDM" //subject to change!

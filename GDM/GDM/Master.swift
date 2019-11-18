@@ -22,6 +22,15 @@ struct Master: View {
                       .padding([.trailing, .leading], -20)
                       .background(Color.yellow)
                 
+                NavigationLink(destination: SettingsView()) {
+                    Text("Settings")
+                    .font(.title)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity)
+                      .padding([.top, .bottom], 8)
+                      .padding([.trailing, .leading], -20)
+                      .background(Color.yellow)
+                
                 /*
                 Button(action: {
                     //button action

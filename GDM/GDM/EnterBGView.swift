@@ -45,7 +45,6 @@ struct EnterBGView: View {
                     Text(Types[$0])
                 }
             }
-            .pickerStyle(WheelPickerStyle())
             
             Button(action: {
                     self.confirmSubmission.toggle()
