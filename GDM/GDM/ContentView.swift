@@ -11,9 +11,10 @@ import Combine
 
 struct ContentView: View {
     @State private var selection = 0
+    @EnvironmentObject var settings : UserSettings
     
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.systemPink
+        UITabBar.appearance().backgroundColor = #colorLiteral(red: 0.9566669365, green: 0.3328225162, blue: 0.7921386133, alpha: 1)
     }
  
     var body: some View {
@@ -50,7 +51,6 @@ struct ContentView: View {
             })
             .tag(3)
             
-
         }
     }
 }

@@ -11,6 +11,8 @@ struct EnterBGView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
+    @EnvironmentObject var settings : UserSettings
+    
     @State var bgText : String = ""
     @State var selectedDate = Date()
     @State var selectedType = -1
@@ -42,7 +44,9 @@ struct EnterBGView: View {
 
             Picker(selection: $selectedType, label: Text("Type of Reading")) {
                 ForEach( 0 ..< Types.count) {
-                    Text(Types[$0])
+                    if(checkOn(type: $0, settings: self.settings)){
+                        Text(Types[$0])
+                    }
                 }
             }
             
@@ -71,7 +75,7 @@ struct EnterBGView: View {
                 
                 readings.append(submission) //adds the current submission into all the readings
                 readings.sort { (bg1: BGReading, bg2: BGReading) -> Bool in
-                    return bg1.date_time > bg2.date_time
+                    return bg1.date_time < bg2.date_time
                 }
                 //stores the sorted array back into UserDefaults
                 UserDefaults.standard.set(try? PropertyListEncoder().encode(readings), forKey: "BGReadings")

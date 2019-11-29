@@ -21,6 +21,7 @@
 		590936E02375BF4C0000BBBB /* GDMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590936DF2375BF4C0000BBBB /* GDMUITests.swift */; };
 		590936EE2375BF680000BBBB /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590936ED2375BF680000BBBB /* Master.swift */; };
 		590936F02375BF6F0000BBBB /* EnterBGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590936EF2375BF6F0000BBBB /* EnterBGView.swift */; };
+		59D7887C23917467008C9B49 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D7887B23917467008C9B49 /* ReportView.swift */; };
 		59E5E9F6237EFE1E002AE563 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E5E9F5237EFE1E002AE563 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		590936E12375BF4C0000BBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		590936ED2375BF680000BBBB /* Master.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		590936EF2375BF6F0000BBBB /* EnterBGView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterBGView.swift; sourceTree = "<group>"; };
+		59D7887B23917467008C9B49 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		59E5E9F5237EFE1E002AE563 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 				590936C12375BF480000BBBB /* ContentView.swift */,
 				590936ED2375BF680000BBBB /* Master.swift */,
 				590936EF2375BF6F0000BBBB /* EnterBGView.swift */,
+				59D7887B23917467008C9B49 /* ReportView.swift */,
 				59E5E9F5237EFE1E002AE563 /* SettingsView.swift */,
 				59056F7D2379BFAF002CC75C /* DisclaimerView.swift */,
 				59056F7F2379BFC7002CC75C /* AboutView.swift */,
@@ -173,6 +176,8 @@
 			dependencies = (
 			);
 			name = GDM;
+			packageProductDependencies = (
+			);
 			productName = GDM;
 			productReference = 590936BA2375BF480000BBBB /* GDM.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +250,8 @@
 				Base,
 			);
 			mainGroup = 590936B12375BF480000BBBB;
+			packageReferences = (
+			);
 			productRefGroup = 590936BB2375BF480000BBBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,6 +300,7 @@
 				59056F7E2379BFAF002CC75C /* DisclaimerView.swift in Sources */,
 				590936F02375BF6F0000BBBB /* EnterBGView.swift in Sources */,
 				59056F822379BFD2002CC75C /* ResourcesView.swift in Sources */,
+				59D7887C23917467008C9B49 /* ReportView.swift in Sources */,
 				59E5E9F6237EFE1E002AE563 /* SettingsView.swift in Sources */,
 				590936EE2375BF680000BBBB /* Master.swift in Sources */,
 				590936C02375BF480000BBBB /* SceneDelegate.swift in Sources */,

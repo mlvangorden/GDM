@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Master: View {
+    
+    @EnvironmentObject var settings : UserSettings
  
     var body: some View {
         NavigationView {
@@ -15,6 +17,15 @@ struct Master: View {
                 
                 NavigationLink(destination: EnterBGView()) {
                     Text(enterBG)
+                    .font(.title)
+                }
+                .frame(minWidth: 0, maxWidth: .infinity)
+                      .padding([.top, .bottom], 8)
+                      .padding([.trailing, .leading], -20)
+                      .background(Color.yellow)
+                
+                NavigationLink(destination: ReportView()) {
+                    Text("View Report")
                     .font(.title)
                 }
                 .frame(minWidth: 0, maxWidth: .infinity)
@@ -30,6 +41,7 @@ struct Master: View {
                       .padding([.top, .bottom], 8)
                       .padding([.trailing, .leading], -20)
                       .background(Color.yellow)
+                
                 
                 /*
                 Button(action: {
