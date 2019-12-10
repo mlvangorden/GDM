@@ -13,35 +13,25 @@ struct Master: View {
  
     var body: some View {
         NavigationView {
-            VStack(spacing: 75){
+            Form{
                 
-                NavigationLink(destination: EnterBGView()) {
-                    Text(enterBG)
-                    .font(.title)
+                Section{
+                    NavigationLink(destination: EnterBGView()) {
+                        Text(enterBG)
+                    }
                 }
-                .frame(minWidth: 0, maxWidth: .infinity)
-                      .padding([.top, .bottom], 8)
-                      .padding([.trailing, .leading], -20)
-                      .background(Color.yellow)
                 
-                NavigationLink(destination: ReportView()) {
-                    Text("View Report")
-                    .font(.title)
+                Section{
+                    NavigationLink(destination: ReportView()) {
+                        Text("View Report")
+                    }
                 }
-                .frame(minWidth: 0, maxWidth: .infinity)
-                      .padding([.top, .bottom], 8)
-                      .padding([.trailing, .leading], -20)
-                      .background(Color.yellow)
                 
-                NavigationLink(destination: SettingsView()) {
-                    Text("Settings")
-                    .font(.title)
+                Section{
+                    NavigationLink(destination: SettingsView()) {
+                        Text("Settings")
+                    }
                 }
-                .frame(minWidth: 0, maxWidth: .infinity)
-                      .padding([.top, .bottom], 8)
-                      .padding([.trailing, .leading], -20)
-                      .background(Color.yellow)
-                
                 
                 /*
                 Button(action: {

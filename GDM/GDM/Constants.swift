@@ -34,6 +34,7 @@ let resources = "Resources"
 let settings_title = "Settings"
 
 struct BGReading : Codable {
+    
     var blood_glucose : Int
     var date_time : Date
     var type : String

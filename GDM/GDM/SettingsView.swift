@@ -63,6 +63,22 @@ struct SettingsView: View {
                     
                 }
  */
+                HStack{
+                    Text("Target Threshold")
+                    TextField("", text: $settings.threshold)
+                    .keyboardType(.numberPad)
+                    .multilineTextAlignment(.trailing)
+                    .onTapGesture {
+                        let keyWindow = UIApplication.shared.connectedScenes
+                            .filter({$0.activationState == .foregroundActive})
+                            .map({$0 as? UIWindowScene})
+                            .compactMap({$0})
+                            .first?.windows
+                            .filter({$0.isKeyWindow}).first
+                        keyWindow!.endEditing(true)
+                    }
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
                 Group {
                     HStack{
                         Toggle(Types[0], isOn: $settings.fasting_on)
@@ -320,12 +336,17 @@ struct SettingsView: View {
                     }
      
                 }
+                Group {
+                    Text("").hidden()
+                    Text("").hidden()
+                    Text("").hidden()
+                }
             }
         }
         .navigationBarTitle(Text(settings_title), displayMode: .automatic)
-        .offset(y: kGuardian.slide).animation(.easeInOut(duration: 0.5))
-        .onAppear { self.kGuardian.addObserver() }
-        .onDisappear { self.kGuardian.removeObserver() }
+        //.offset(y: kGuardian.slide).animation(.easeInOut(duration: 0.5))
+        //.onAppear { self.kGuardian.addObserver() }
+        //.onDisappear { self.kGuardian.removeObserver() }
     }
 }
 
@@ -356,6 +377,13 @@ final class UserSettings: ObservableObject {
     
     @UserDefault("doctor_email", defaultValue: "")
     var doctor_email: String {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    @UserDefault("threshold", defaultValue: "")
+    var threshold : String {
         willSet {
             objectWillChange.send()
         }
