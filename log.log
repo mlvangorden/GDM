@@ -1,3 +1,83 @@
+commit 8040924b40815ada26ec3736a08e7b09d67cfcd8
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Tue Dec 10 14:23:25 2019 -0500
+
+    Basically Done
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ .../UserInterfaceState.xcuserstate                 | Bin 43907 -> 43883 bytes
+ GDM/GDM/Constants.swift                            |   1 +
+ GDM/GDM/Master.swift                               |  36 ++-
+ GDM/GDM/ReportView.swift                           | 250 ++++++++++++++++++++-
+ GDM/GDM/SettingsView.swift                         |  34 ++-
+ 6 files changed, 286 insertions(+), 35 deletions(-)
+
+commit 41e0894e6079b5c6c2a318ce077b17c5ed169c3e
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Fri Nov 29 17:05:49 2019 -0500
+
+    11/29/19 5:05pm Everything works except email report
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ GDM/GDM.xcodeproj/project.pbxproj                  |   8 +
+ .../project.xcworkspace/contents.xcworkspacedata   |   2 +-
+ .../UserInterfaceState.xcuserstate                 | Bin 34073 -> 43907 bytes
+ .../xcdebugger/Breakpoints_v2.xcbkptlist           |   6 +
+ GDM/GDM/Constants.swift                            | 169 ++++++++
+ GDM/GDM/ContentView.swift                          |   4 +-
+ GDM/GDM/EnterBGView.swift                          |   8 +-
+ GDM/GDM/Info.plist                                 |   2 -
+ GDM/GDM/Master.swift                               |  12 +
+ GDM/GDM/ReportView.swift                           | 252 +++++++++++
+ GDM/GDM/SceneDelegate.swift                        |   3 +-
+ GDM/GDM/SettingsView.swift                         | 470 +++++++++++++--------
+ 13 files changed, 743 insertions(+), 193 deletions(-)
+
+commit be9679706ef68b03ba21a0a3df9b8249eb7c7dda
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Mon Nov 18 13:48:30 2019 -0500
+
+    10/18/19 1:48pm Added Settings page
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ GDM/.DS_Store                                      | Bin 0 -> 6148 bytes
+ .../UserInterfaceState.xcuserstate                 | Bin 33354 -> 34073 bytes
+ GDM/GDM/Constants.swift                            |   1 -
+ GDM/GDM/EnterBGView.swift                          |   1 -
+ GDM/GDM/Master.swift                               |   9 +
+ GDM/GDM/SettingsView.swift                         | 427 ++++++++++++++++++---
+ 7 files changed, 392 insertions(+), 46 deletions(-)
+
+commit 0286d298593ed4a3c7ab385f1294a8be75c06244
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Fri Nov 15 10:46:20 2019 -0500
+
+    11/14/19 10:43am added UserDefaults to store BGReadings
+
+ .DS_Store                                          | Bin 6148 -> 6148 bytes
+ GDM/GDM.xcodeproj/project.pbxproj                  |   8 ++
+ .../UserInterfaceState.xcuserstate                 | Bin 31282 -> 33354 bytes
+ GDM/GDM/AboutView.swift                            |   4 +-
+ GDM/GDM/Constants.swift                            |  38 +++++++++
+ GDM/GDM/ContentView.swift                          |  14 ++--
+ GDM/GDM/DisclaimerView.swift                       |   4 +-
+ GDM/GDM/EnterBGView.swift                          |  86 +++++++++++++++------
+ GDM/GDM/Master.swift                               |   8 +-
+ GDM/GDM/ResourcesView.swift                        |   4 +-
+ GDM/GDM/SettingsView.swift                         |  73 +++++++++++++++++
+ 11 files changed, 197 insertions(+), 42 deletions(-)
+
+commit 848363f38d92cbda3c304a9e82128faa6f5f052c
+Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
+Date:   Wed Nov 13 10:02:33 2019 -0500
+
+    11/13/19 10:00am First submission
+
+ .DS_Store | Bin 6148 -> 6148 bytes
+ README.md |   9 ++++-
+ log.log   | 116 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 124 insertions(+), 1 deletion(-)
+
 commit efdfce344981194775a5dee83ab9c2089f999f9e
 Author: Matthew Van Gorden <33157785+mlvangorden@users.noreply.github.com>
 Date:   Wed Nov 13 09:57:01 2019 -0500
